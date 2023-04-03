@@ -10,7 +10,7 @@ If you'd like to contribute to the development of Weblogize, you can find our so
 
 1. Clone the repository to your local machine:
 ```
-git clone https://github.com/alejan1ch/BLOGSITE.git
+git clone https://github.com/alejan1ch/weblogize.git
 ```
 
 2. Install the necessary dependencies:
