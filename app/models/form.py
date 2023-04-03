@@ -12,12 +12,12 @@ class RegisterForm(FlaskForm):
     email = EmailField('Email', validators=[DataRequired()])
     password =  PasswordField('Password', validators=[DataRequired()])
     name =  StringField('Name', validators=[DataRequired()])
-    submit = SubmitField("Sign")
+    submit = SubmitField("Sign Up")
     
 class Longin(FlaskForm):
     email = EmailField('Email', validators=[DataRequired()])
     password =  PasswordField('Password', validators=[DataRequired()])
-    submit = SubmitField("Sign")
+    submit = SubmitField("Log In")
     
 class CommentForm(FlaskForm):
     body = CKEditorField("Blog Content", validators=[DataRequired()])

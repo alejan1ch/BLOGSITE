@@ -64,23 +64,22 @@ def add_new_post():
 @bp.route("/edit-post/<int:post_id>", methods=['GET','POST'])
 @login_required
 def edit_post(post_id):
-    post = db.session.query(BlogPost).filter_by(post_id).first()
+    post = db.session.query(BlogPost).filter_by(id=post_id).first()
     edit_form = CreatePostForm(
         title=post.title,
         subtitle=post.subtitle,
         img_url=post.img_url,
-        author=post.author,
+        author=g.user,
         body=post.body
     )
     if edit_form.validate_on_submit():
         post.title = edit_form.title.data
         post.subtitle = edit_form.subtitle.data
         post.img_url = edit_form.img_url.data
-        post.author = edit_form.author.data
         post.body = edit_form.body.data
         db.session.commit()
         return redirect(url_for("blog.show_post", post_id=post.id))
-    return render_template("blog.make-post.html", form=edit_form)
+    return render_template("post/make-post.html", form=edit_form)
 
 
 @bp.route("/delete/<int:post_id>")

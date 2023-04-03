@@ -5,7 +5,7 @@
 {% include "header.html" %}
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('https://images.unsplash.com/photo-1484100356142-db6ab6244067?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80')">
+  <header class="masthead" style="background-image: url('https://images.unsplash.com/photo-1533575770077-052fa2c609fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -31,9 +31,11 @@
   {% endif %}
 {% endwith %}
 
-      <div class="col-lg-8 col-md-10 mx-auto mb-5 content">
-        {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+      <div class="col-lg-8 col-md-6 mx-auto mb-5 content">
+        <div>  {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}</div>
+        <div class="mt-5"> <a class="" href="{{url_for('auth.register')}}">Sign Up</a></div>
       </div>
+     
     </div>
   </div>
 
