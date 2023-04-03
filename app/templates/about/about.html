@@ -1,31 +1,40 @@
 {% include "header.html" %}
 
-  <!-- Page Header -->
-  <header class="masthead" style="background-image: url({{ url_for('static', filename='img/about-bg.jpg')}})">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>About Me</h1>
-            <span class="subheading">This is what I do.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Main Content -->
+<!-- Page Header -->
+<header
+  class="masthead"
+  style="background-image: url({{url_for('static', filename='img/about-bg.jpg')}})"
+>
+  <div class="overlay"></div>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>
+        <div class="page-heading">
+          <h1>About</h1>
+          <span class="subheading">This is what we do.</span>
+        </div>
       </div>
     </div>
   </div>
+</header>
 
-  <hr>
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <h2>Our Mission</h2>
+      <p>At Weblogize, our mission is to provide a space where everyone can have a voice and be heard. We believe that everyone has a story to tell, whether you're a writer, a photographer, an artist, or just someone who wants to share their thoughts. Our platform is designed to be simple and user-friendly, so you can focus on creating and sharing content without any hassle.</p>
+      <h2>Our Community</h2>
+      <p>Our community is diverse and inclusive, and we encourage respectful and constructive dialogue. We believe that open communication is essential for personal growth and collective progress. By sharing our perspectives and engaging in meaningful conversations, we can learn from each other and expand our horizons.</p>
+      <h2>Our Values</h2>
+      <p>We value authenticity and creativity, and we encourage you to be yourself. Our platform is a safe space where you can express your ideas and opinions without fear of judgment or censorship. We believe that diversity is a strength, and we celebrate the unique perspectives and voices of our members.</p>
+      <h2>Join Our Community</h2>
+      <p>Weblogize is more than just a website – it's a community. We invite you to join us on this journey of self-discovery and mutual learning. Whether you're a seasoned blogger or a beginner, we're here to support you and help you grow. Thank you for being part of our community, and we look forward to seeing what you have to share.</p>
+    
+    </div>
+  </div>
+</div>
 
-  {% include "footer.html" %}
+<hr />
+
+{% include "footer.html" %}

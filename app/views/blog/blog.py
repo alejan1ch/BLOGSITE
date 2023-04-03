@@ -13,7 +13,6 @@ def get_all_posts():
 
 
 @bp.route("/post/<int:post_id>", methods=['GET', 'POST'])
-
 def show_post(post_id):
     requested_post = BlogPost.query.get(post_id)
     form = CommentForm()
@@ -30,8 +29,7 @@ def show_post(post_id):
         db.session.add(new_comment)
         db.session.commit()
         return redirect(url_for("blog.show_post", post_id=post_id))
-    comments = Comment.query.all()
-    print(type(comments))
+    comments =  Comment.query.filter_by(post_id=post_id).all()
     return render_template("post/post.html", post=requested_post, form=form, comments = comments)
 
 @bp.route("/about")
@@ -88,8 +86,15 @@ def edit_post(post_id):
 @bp.route("/delete/<int:post_id>")
 @login_required
 def delete_post(post_id):
-    post_to_delete = db.session.query(BlogPost).filter_by(id=post_id).first()
-    db.session.delete(post_to_delete)
+    # Find the blog post to delete
+    
+    # Delete all comments associated with the post
+    
+    # Commit changes to the database
+    for comment in Comment.query.filter_by(post_id=post_id).all():
+        print(comment)
+        db.session.delete(comment)
+    db.session.delete(BlogPost.query.filter_by(id=post_id).first())
     db.session.commit()
     return redirect(url_for('blog.get_all_posts'))
 
