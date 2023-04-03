@@ -6,7 +6,7 @@ Weblogize is a platform that allows you to share your thoughts, ideas, and exper
 
 To use Weblogize, simply visit our website at https://www.weblogize.com and create an account. Once you're signed in, you can start creating and sharing content with our community.
 
-If you'd like to contribute to the development of Weblogize, you can find our source code on GitHub at https://github.com/your-username/weblogize. To set up a local development environment, follow these steps:
+If you'd like to contribute to the development of Weblogize, you can find our source code on GitHub at https://github.com/alejan1ch/weblogize.git. To set up a local development environment, follow these steps:
 
 1. Clone the repository to your local machine:
 ```
